@@ -206,7 +206,6 @@ def call_back_handler(client: Client, callback: CallbackQuery):
         admin.state = callback.data
         channels_temp = []
         if len(admin.channels) == 0:
-            callback.message.reply_text("")
             back_button(client=client, message=callback.message, text="شما کانالی برای حذف کردن ندارید!")
         else:
             for channel in admin.channels:
